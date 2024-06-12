@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .header,
+        .footer {
+            width: 100%;
+            height: 100px;
+            background-color: aqua;
+        }
+
+        .container {
+            width: 100%;
+            height: 70%;
+            gap: 10px;
+            margin: 5px 0px;
+        }
+
+        .container,
+        .header,
+        .aside,
+        .footer,
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .aside {
+            width: 25%;
+            height: 500px;
+            background-color: blueviolet;
+        }
+
+        .main {
+            width: 50%;
+            height: 500px;
+            background-color: chartreuse;
+        }
+
+        @media screen and (max-width:1024px) {
+            .container {
+                flex-wrap: wrap;
+            }
+            .aside{
+                width: 100%;
+                height: 300px;
+            }
+            .one{
+                width: 48%;
+                height: 600px;
+            }
+            .main{
+                width: 48%;
+                height: 600px;
+            }
+        }
+
+        @media screen and (max-width:678px) {
+            .container {
+                flex-wrap: wrap;
+            }
+            .aside{
+                width: 100%;
+                height: 300px;
+            }
+            .main{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>header</h1>
+    </div>
+    <div class="container">
+        <div class="aside one">
+            <h1>Aside</h1>
+        </div>
+        <div class="main">
+            <h1>Main</h1>
+        </div>
+        <div class="aside">
+            <h1>Aside</h1>
+        </div>
+    </div>
+    <div class="footer">
+        <h1>Footer</h1>
+    </div>
+</body>
+
+</html>
